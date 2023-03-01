@@ -1,0 +1,10 @@
+docker run -d \
+  --name overseerr \
+  -e LOG_LEVEL=debug \
+  -e TZ=Africa/Johannesburg \
+  -e PORT=5055 `#optional` \
+  -p 5055:5055 \
+  -v /home/dean/overseerr/config:/app/config \
+  --restart unless-stopped \
+  sctx/overseerr
+  
