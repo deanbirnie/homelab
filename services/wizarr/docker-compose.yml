@@ -1,0 +1,15 @@
+---
+version: "3.8"
+services:
+  wizarr:
+    container_name: wizarr
+    image: ghcr.io/wizarrrr/wizarr
+    ports:
+      - 5690:5690
+    volumes:
+      - /home/dean/wizarr/config:/data/database
+    environment:
+      - APP_URL=https://plex-invite.birnie.co.za
+      - DISABLE_BUILTIN_AUTH=false #Set to true ONLY if you are using another auth provider (Authelia, Authentik, etc)
+      - TZ=Africa/Johannesburg #Set your timezone here
+      
